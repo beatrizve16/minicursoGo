@@ -1,0 +1,39 @@
+// Crie um Array de inteiros com 10 elementos. Em seguida, solicite ao usuário que informe um valor e verifique se esse valor está presente no Array. Imprima o resultado da busca.
+
+package main
+import "fmt"
+
+func main() {
+    
+    var array [10]int
+    var num int
+    
+    for i:=0; i<len(array); i++{
+        fmt.Println("Digite o valor da posição: ", i)
+        fmt.Scan(&array[i])
+    }
+        
+        
+    fmt.Println("Digite um número:")
+    fmt.Scan(&num)
+    
+    tf:= false
+    
+    
+    for i:=0; i<10; i++{
+        
+        if num == array[i]{
+           tf = true 
+           break
+        }else{
+           continue 
+        }
+    }
+    
+    if tf {
+        fmt.Print("O numero esta incluido no array :)")
+    }else{ 
+        fmt.Print("O número não está incluido no array :(")
+    }
+    
+}
