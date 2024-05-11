@@ -1,0 +1,26 @@
+package main
+
+import (
+    "fmt"
+    "math"
+    )
+
+func pot(num float64 , expo float64 ) float64 {
+    resp := math.Pow(num, expo) 
+    return resp
+}
+
+func main() {
+    var num float64
+    var expo float64
+    
+    fmt.Print("Digite o número que quer calcular a potencia: ")
+    fmt.Scanln(&num)
+    
+    fmt.Print("Digite o expoente: ")
+     fmt.Scanln(&expo)
+     
+    res := pot (num, expo)
+    fmt.Printf(" %f elevado a %f é %f\n", num, expo, res)
+}
+
