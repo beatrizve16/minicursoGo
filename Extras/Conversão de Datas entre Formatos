@@ -1,0 +1,23 @@
+/*Conversão de Datas entre Formatos: Crie um programa que converta uma data fornecida pelo usuário de um formato para outro, como de "DD/MM/AAAA" para "AAAA-MM-DD".*/
+
+package main
+import  "fmt" 
+
+func main() {
+   
+var data1 string
+
+fmt.Print("Digite a data no formato DD/MM/AAAA: ")
+fmt.Scanln(&data1)
+
+/*considerei a data inteira como um string só ai cortei nas partes dos números e fiz uma variável pra cada parte*/
+
+dia := data1[:2]
+mes := data1[3:5]
+ano := data1[6:]
+
+
+fmt.Printf("A data no formato AAAA-MM-DD é: %s-%s-%s", ano, mes , dia)
+   
+}
+
