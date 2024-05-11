@@ -1,0 +1,18 @@
+//Usando função faça um algoritmo simples que pede dois números como entrada e retorna a soma desses dois números.
+
+package main
+import "fmt"
+
+func soma(a, b float32) float32 {
+    return a+b
+}
+
+func main () {
+    var a float32
+    var b float32
+    
+    fmt.Println("Digite os dois valores")
+    fmt.Scan(&a , &b)
+    soma(a , b)
+    fmt.Println("A soma entre os dois valores e:" , soma(a , b))
+}
