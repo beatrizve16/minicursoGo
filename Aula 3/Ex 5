@@ -1,0 +1,22 @@
+package main
+import "fmt"
+
+func main() {
+    
+    var x int
+   
+    fmt.Print("Digite o numero que deseja saber os divisores\n")
+    fmt.Scan(&x)
+    
+    for i:=1 ; i<=x ; i++ {
+        
+    if  x%i  == 0 {
+        
+    fmt.Println(i) 
+    
+    }
+    
+    continue
+    
+    }
+    }
