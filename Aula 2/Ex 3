@@ -1,0 +1,56 @@
+package main
+import "fmt"
+
+func main() {
+    var A float64
+    var B float64
+    var C float64
+    var oper float64
+   
+   // receber os valores que serao utilizados
+   
+  fmt.Println("\nDigite os valores de A, B e C")
+  fmt.Scan(&A, &B , &C)
+ 
+  // decidir qual operacao deseja realizar
+  fmt.Println("\nDigite a operação que deseja realizar: \n1 - a área do triângulo retângulo \n2 - a área do círculo \n3 - a área do trapézio \n4 - a área do quadrado \n5- a área do retângulo \n6- Todas as operações ")
+   fmt.Scan(&oper)
+
+ 
+  switch oper {
+     
+case 1:
+//a) a área do triângulo retângulo que tem A por base e C por altura.
+fmt.Printf("\na área do triângulo retângulo que tem A por base e C por altura é:\n %.2f", ((A*C)/ 2))
+
+case 2:
+//b) a área do círculo de raio C. (pi = 3.14159).
+fmt.Printf("\na área do círculo de raio C. é:\n %.2f", (3.14159*C*C))
+
+case 3:
+//c) a área do trapézio que tem A e B por bases e C por altura.
+fmt.Printf("\na área do trapézio que tem A e B por bases e C por altura é:\n %.2f", (((A+B)*C)/2))
+
+
+case 4:
+//d) a área do quadrado que tem lado B.
+fmt.Printf(" \na área do quadrado que tem lado B é: \n %.2f", (B*B) )
+
+case 5:
+//e) a área do retângulo que tem lados A e B.
+fmt.Printf("\na área do retângulo que tem lados A e B é: \n %.2f",(A*B) )
+
+case 6:
+//todas as operações juntas
+fmt.Printf("\n1-a área do triângulo retângulo que tem A por base e C por altura é:\n %.2f", ((A*C)/ 2))
+fmt.Printf("\n2-a área do círculo de raio C. é:\n %.2f", (3.14159*C*C))
+fmt.Printf("\n3-a área do trapézio que tem A e B por bases e C por altura é:\n %.2f", (((A+B)*C)/2))
+fmt.Printf(" \n4-a área do quadrado que tem lado B é: \n %.2f", (B*B) )
+fmt.Printf("\n5-a área do retângulo que tem lados A e B é: \n %.2f",(A*B) )
+
+}
+ 
+ 
+ 
+}
+
