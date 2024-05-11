@@ -1,0 +1,16 @@
+package main
+import "fmt"
+
+func main() {
+    
+    var num int
+    
+    fmt.Print("Digite o numero que deseja fazer a tabuada\n")
+    fmt.Scan(&num)
+    
+    
+    for i:= 0; i<=10; i+=num {
+      fmt.Println(i)
+  }
+  
+}
