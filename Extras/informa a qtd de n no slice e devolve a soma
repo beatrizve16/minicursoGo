@@ -1,0 +1,23 @@
+package main
+import "fmt"
+
+func main (){
+    
+var lista [] int 
+var qtd int 
+var soma int
+
+fmt.Println("Informe a quantidade de valores dentro do slice:")
+fmt.Scan(&qtd)
+
+lista = make([]int, qtd)
+
+fmt.Println("Informe os números do slice:")
+
+for i:=0 ; i<len(lista); i++{
+    fmt.Scan(&lista[i])
+    soma+=lista[i]
+    }
+    
+fmt.Printf("Lista: %d Soma: %d" , lista , soma)
+}
