@@ -1,0 +1,51 @@
+/*Conversão de Números Romanos para Inteiros: Crie um programa que converta um número romano fornecido pelo usuário em um número inteiro.*/
+
+package main
+
+import "fmt"
+	
+
+ /* uma func pra transformar romano em int*/
+
+func romParaInt(r string) int {
+	res := 0
+    /* um map como um dicionario mostrando os numeros romanos e seus equivalentes em inteiros*/
+	m := map[byte]int{
+		'I': 1,
+		'V': 5,
+		'X': 10,
+		'L': 50,
+		'C': 100,
+		'D': 500,
+		'M': 1000,
+	}
+    /* um for que vai percorrer a lista de traz pra frente pq nos n romanos tem subtracao/adicao etc e a ordem importa ai precisa ser de traz pra frente caso um numero menor esteja antes por exemplo */
+
+	nrom := 0
+	for i := len(r) - 1; i >= 0; i-- {
+		temp := m[r[i]]
+
+        /* condicao por causa da regra da ordem, para sub ou add*/
+        
+		if temp < nrom {
+			res -= temp
+		} else {
+			res += temp
+		}
+        /* igualar uma variavel a outra*/
+		nrom = temp
+	}
+	return res
+}
+
+func main() {
+	var numrom string
+	fmt.Print("Digite um número romano: ")
+	fmt.Scan(&numrom)
+
+/* cria uma variavel que vai receber e usar a func*/
+
+	num := romParaInt(numrom)
+	fmt.Println("O número romano", numrom, "equivale a", num)
+}
+
