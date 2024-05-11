@@ -1,0 +1,36 @@
+package main
+import "fmt"
+
+
+
+func main() {
+    
+
+var oper float32
+var num1 float32
+var num2 float32
+
+  fmt.Println("Digite a operação que deseja realizar: 1 - Soma, 2 - Subtração, 3 - Divisão ou 4 - Multiplicação ")
+   fmt.Scan(&oper)
+   
+    fmt.Println("Digite os valores que deseja usar ")
+   fmt.Scan(&num1, &num2)
+  
+   switch oper {
+case 1:
+
+fmt.Println("A soma e:  ", num1 + num2)
+
+case 2:
+
+fmt.Println("a subtração e ", num1 - num2 )
+
+case 3:
+fmt.Println("a divisao e ",  num1 / num2 )
+
+case 4:
+fmt.Println("a divisao e ",  num1 *  num2 )
+}
+
+}
+
