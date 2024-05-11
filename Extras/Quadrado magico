@@ -1,0 +1,43 @@
+package main
+import "fmt"
+func main() {
+   
+var a int 
+var b int
+var c int 
+var d int 
+var e int 
+var f int 
+var g int 
+var h int 
+var i int 
+var l1 int 
+var l2 int 
+var l3 int 
+var c1 int 
+var c2 int 
+var c3 int 
+var d1 int 
+var d2 int
+
+fmt.Println("Digite os valores de a, b, c, d, e, f, g, h e i (Fale fileira por fileira da esquerda para a direita)")
+fmt.Scan(&a, &b, &c, &d, &e, &f, &g, &h, &i)
+
+l1= a+b+c
+l2= d+e+f
+l3= g+h+i
+c1=a+d+g
+c2= b+e+h
+c3= c+f+i
+d1=a+e+i
+d2= g+e+c
+
+
+if l1==l2 && l1==l3 && l1==c1 && l1==c2 && l1 == c3 && l1 == d1 && l1 == d2 && l2 == l3 && l2 == c1 && l2 == c2 && l2 == c3 && l2 == d1 && l2 == d2  && l3 == c1 && l3 == c1 && l3 == c2 && l3 == c3 && l3 == d1 && l3 == d2 && c1 == c2 && c1 == c3 && c1 == d1 && c1 == d2 && c2 == c3 && c2 == d1 && c2 == d2 && c3 == d1 && c3 == d2 && d1 == d2 {
+    
+fmt.Println("Sim, este é um quadrado mágico :) ")
+} else {
+fmt.Println("Não, este não é um quadrado mágico :(")
+
+}
+}
