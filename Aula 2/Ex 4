@@ -1,0 +1,17 @@
+package main
+import "fmt"
+
+func main() {
+    var A float32
+    var B float32
+    var C float32
+    var D float32
+    
+  fmt.Println("Digite os valores de A, B, C e D")
+  fmt.Scan(&A, &B , &C, &D)
+  
+  fmt.Println("a diferença do produto de C e D é:" , (A * B - C * D))
+  
+  
+}
+
