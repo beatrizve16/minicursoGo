@@ -1,0 +1,34 @@
+package main
+
+import "fmt"
+
+func calcularMedia() float64 {
+	var num, soma float64
+	var numMedia int
+
+	for {
+		fmt.Println("Digite um número para a média (digite 0 para o resultado):")
+		fmt.Scan(&num)
+
+		if num == 0 {
+			break
+		}
+
+		soma += num
+		numMedia++
+	}
+
+	if numMedia == 0 {
+		fmt.Println("Nenhum número foi digitado")
+		return 0
+	}
+
+	media := soma / float64(numMedia)
+	return media
+}
+
+func main() {
+	media := calcularMedia()
+	fmt.Printf("A média é: %.2f", media)
+}
+
