@@ -1,0 +1,38 @@
+package main
+
+import (
+    "fmt"
+    "sort"
+    "strings"
+    "unicode"
+)
+
+type slice struct {
+    sort.StringSlice
+}
+
+func (s slice) Less(d, e int) bool {
+    t := strings.Map(unicode.ToUpper, s.StringSlice[d])
+    u := strings.Map(unicode.ToUpper, s.StringSlice[e])
+    return t < u
+}
+
+func main() {
+    var lista []string
+    var qtd int
+
+    fmt.Println("Informe a quantidade de strings na lista:")
+    fmt.Scan(&qtd)
+
+    lista = make([]string, qtd)
+
+    fmt.Println("Informe as strings:")
+    for i := 0; i < len(lista); i++ {
+        fmt.Scan(&lista[i])
+    }
+
+    a := slice{sort.StringSlice(lista)}
+    sort.Sort(a)
+
+    fmt.Println("Lista ordenada:", a.StringSlice)
+}
