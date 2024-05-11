@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func fat(num int) int {
+    if num == 0 {
+        return 1
+}
+    return num * fat(num-1)
+}
+func main() {
+    var num int
+    fmt.Print("Digite o número que quer calcular o fatorial: ")
+    fmt.Scanln(&num)
+
+    fmt.Printf("O fatorial de %d é %d\n", num, fat(num))
+}
